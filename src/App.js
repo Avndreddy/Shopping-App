@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar';
 import HeroBanner from './Components/HeroBanner';
 import Ads from './Components/Ads';
 import Products from './Components/Products';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HeroBanner/>
       <Ads/>
       <Products/>
+      <Footer/>
     </div>
   );
 }
