@@ -31,16 +31,24 @@ function NavBar() {
                     . Brand Logo
                 </Box>
                 <Box className="navigation">
-                    <Box>
-                        Men <span className="right-arrow">&gt;</span>
+                    <Box className="Navigation-item" 
+                    onMouseEnter={() => setIsSearchHovered(true)}
+                    onMouseLeave={() => setIsSearchHovered(false)}>
+                        Men <span className="right-arrow" >&gt;</span>
                     </Box>
-                    <Box>
+                    <Box  className="Navigation-item" 
+                    onMouseEnter={() => setIsSearchHovered(true)}
+                    onMouseLeave={() => setIsSearchHovered(false)}>
                         Women <span className="right-arrow">&gt;</span>
                     </Box>
-                    <Box>
+                    <Box  className="Navigation-item" 
+                    onMouseEnter={() => setIsSearchHovered(true)}
+                    onMouseLeave={() => setIsSearchHovered(false)}>
                         Kids <span className="right-arrow">&gt;</span>
                     </Box>
-                    <Box>
+                    <Box  className="Navigation-item" 
+                    onMouseEnter={() => setIsSearchHovered(true)}
+                    onMouseLeave={() => setIsSearchHovered(false)}>
                         Home & Living <span className="right-arrow">&gt;</span>
                     </Box>
                 </Box>

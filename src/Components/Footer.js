@@ -11,11 +11,56 @@ function Footer() {
   };
   return (
     <div className="footer">
-      <div className="footer-top">
+
+
+      <div className="footer-content">
+        <div className="footer-content-brand">
+          <div className="footer-content-brand-logo">. Brand Logo</div>
+          <div className="footer-content-brand-moto">
+            Style That Defines You.
+          </div>
+          <div className="footer-content-about-brand">
+            "At{" "}
+            <span style={{ fontFamily: "Lobster", fontSize: "14px" }}>
+              . Brand Logo
+            </span>
+            , we believe clothing is more than fabric—it's a statement. With a focus on quality and sustainability, we craft pieces that inspire confidence and individuality.
+
+<div>Stay stylish. Stay you.</div>
+          </div>
+        </div>
+        <div className="footer-content-quick-links">
+          <div>Customer Service</div>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Track Order</a>
+          </li>
+          <li>
+            <a href="#">Return Order</a>
+          </li>
+          <li>
+            <a href="#">Return Order</a>
+          </li>
+        </div>
+        <div className="footer-content-quick-links">
+          <div>Company</div>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">We Are Hiring</a>
+          </li>
+          <li>
+            <a href="#">FAQs</a>
+          </li>
+        </div>
+        <div className="footer-content-Social">
         <div className="NewsLetter">
           <div className="NewsLetter-title">NEWSLETTER</div>
           <div className="NewsLetter-p-tag">
-            Join our mail list to stay udivdated for best offers and price
+            Join our mail list to gey best offers and price
             alerts.
           </div>
           <div className="NewsLetter-input">
@@ -39,7 +84,8 @@ function Footer() {
         </div>
 
         <div className="Social-links">
-          <div className="Social-links-text">Fallow us on:</div>
+          <div className="Social-links-text">FALLOW US:</div>
+          Discover the .BrandName Lifestyles
           <div className="Social-links-icons">
             <a href="https://www.facebook.com/">
               <FacebookIcon fontSize="medium" sx={{ color: "black" }} />
@@ -59,46 +105,6 @@ function Footer() {
           </div>
         </div>
       </div>
-
-      <div className="footer-content">
-        <div className="footer-content-brand">
-          <div className="footer-content-brand-logo">. Brand Logo</div>
-          <div className="footer-content-brand-moto">
-            Style That Defines You.
-          </div>
-          <div className="footer-content-about-brand">
-            "At <span style={{ fontFamily: "Lobster",fontSize:"14px" }}>. Brand Logo</span>,
-            Empowering your unique style with elegant, sustainable fashion.
-          </div>
-        </div>
-        <div className="footer-content-quick-links">
-            <div>Customer Service</div>
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-            <li>
-                <a href="#">Track Order</a>
-            </li>
-            <li>
-                <a href="#">Return Order</a>
-            </li>
-            <li>
-                <a href="#">Return Order</a>
-            </li>
-        </div>
-        <div className="footer-content-quick-links">
-            <div>Company</div>
-            <li>
-                <a href="#">About Us</a>
-            </li>
-            <li>
-                <a href="#">We Are Hiring</a>
-            </li>
-            <li>
-                <a href="#">FAQs</a>
-            </li>
-          
-        </div>
       </div>
 
       <div>
