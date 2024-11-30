@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [product, setProducts] = useState();
@@ -9,6 +10,8 @@ function Products() {
   const handleViewMore = () => {
     setViewMore((prev) => prev + 10); // Show 10 more products (next 2 rows)
   };
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -36,7 +39,7 @@ function Products() {
     const newCart = { id: product.id, count: count };
     if (!localCart) {
       setLoaclCart([newCart]);
-      localStorage.setItem('Local_Cart',localCart)
+      localStorage.setItem("Local_Cart", localCart);
     }
     if (localCart.find((localCart) => localCart.id == product.id)) {
       localCart.map((localCart) =>
@@ -44,9 +47,8 @@ function Products() {
       );
     } else {
       setLoaclCart([...localCart, newCart]);
-      localStorage.setItem('Local_Cart',JSON.stringify(localCart))
+      localStorage.setItem("Local_Cart", JSON.stringify(localCart));
     }
-    
   };
 
   const RemoveProductsToCart = (product) => {
@@ -55,10 +57,9 @@ function Products() {
         localCart.id == product.id ? localCart.count++ : localCart
       );
     } else {
-      setLoaclCart([...localCart, ]);
-      localStorage.setItem('Local_Cart',JSON.stringify(localCart))
+      setLoaclCart([...localCart]);
+      localStorage.setItem("Local_Cart", JSON.stringify(localCart));
     }
-    
   };
   // const checkImageOrNot = async (url) => {
   //     try {
@@ -90,7 +91,12 @@ function Products() {
         {product &&
           product.slice(0, viewmore).map((product, index) => (
             <div className="product-conatiner" key={index}>
-              <div key={index}>
+              <div
+                key={index}
+                onClick={() =>
+                  navigate(`/product/${product.id}`, { state: { product } })
+                }
+              >
                 <div>
                   {product.images[0].startsWith("[") ? (
                     <div
@@ -137,30 +143,27 @@ function Products() {
                       className="cart-btn"
                       onClick={() => AddProductsToCart(product)}
                     >
-                      <AddShoppingCartIcon
-                        sx={{ color: "white" }}
-                      />
+                      <AddShoppingCartIcon sx={{ color: "white" }} />
                     </div>
                   </span>
                 </div>
               </div>
             </div>
           ))}
-        
       </div>
       {product && product.length > viewmore && (
-          <button
-            style={{
-              backgroundColor: "black",
-              color: "white",
-              padding: "10px",
-              maxHeight: "fit-Content",
-            }}
-            onClick={handleViewMore}
-          >
-            viewmore
-          </button>
-        )}
+        <button
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            padding: "10px",
+            maxHeight: "fit-Content",
+          }}
+          onClick={handleViewMore}
+        >
+          viewmore
+        </button>
+      )}
     </div>
   );
 }
