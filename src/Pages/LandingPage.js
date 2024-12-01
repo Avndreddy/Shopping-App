@@ -1,3 +1,4 @@
+import "../Styles/LandingPage.css";
 import HeroBanner from "../Components/HeroBanner";
 import Ads from "../Components/Ads";
 import Products from "../Components/Products";

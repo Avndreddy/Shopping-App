@@ -35,7 +35,7 @@ function App() {
         <Router>
         <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path="/product/:id" element={<Product/>} />
+        <Route path="/product/:id" element={<Product />} />
         </Routes>
         </Router>
         <Footer />

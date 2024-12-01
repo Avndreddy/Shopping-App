@@ -1,5 +1,5 @@
+import "../Styles/NavBar.css";
 import React, { useEffect, useRef, useState } from "react";
-import "../Styles/MyStyles.css";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -47,25 +47,28 @@ function NavBar() {
           {listItem.map((item, index) => (
             <Box
               className="Navigation-item"
-              onMouseEnter={() => setCategory({ ...category, [item.label]: true })}
-              onMouseLeave={() => setCategory({ ...category, [item.label]: false })}
+              onMouseEnter={() =>
+                setCategory({ ...category, [item.label]: true })
+              }
+              onMouseLeave={() =>
+                setCategory({ ...category, [item.label]: false })
+              }
               keys={index}
             >
               {item.label} <span className="right-arrow">&gt;</span>
-              {category[item.label] &&
-                <div
-                className="nav-List"
-                >
+              {category[item.label] && (
+                <div className="nav-List">
                   {item.subItems.map((subItem, subindex) => (
-                    <div className="Navigation-Subitem" key={subindex}>{subItem}</div>
+                    <div className="Navigation-Subitem" key={subindex}>
+                      {subItem}
+                    </div>
                   ))}
                 </div>
-              }
+              )}
             </Box>
           ))}
         </Box>
 
-        
         <Box className="right-navigation">
           <Box
             className="right-navigation-Icons"

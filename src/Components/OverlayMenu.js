@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { List, ListItem } from "@mui/material";
 import "../Styles/MyStyles.css";
+import "../Styles/NavBar.css";
 
 function OpenOverlay() {
   const [isOverlayOpened, setIsOverlatOpened] = useState(true);

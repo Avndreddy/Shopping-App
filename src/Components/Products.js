@@ -1,3 +1,4 @@
+import "../Styles/Product_Cards.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -135,7 +136,7 @@ function Products() {
                           className="price-text"
                           style={{ fontWeight: "normal" }}
                         >
-                          ${product.price + 20}
+                          ${product.price + 10}
                         </s>
                       </span>
                     </div>
@@ -152,15 +153,7 @@ function Products() {
           ))}
       </div>
       {product && product.length > viewmore && (
-        <button
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            padding: "10px",
-            maxHeight: "fit-Content",
-          }}
-          onClick={handleViewMore}
-        >
+        <button className="view-more" onClick={handleViewMore}>
           viewmore
         </button>
       )}

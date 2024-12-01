@@ -61,7 +61,9 @@ function Product() {
                 {Math.trunc((10 / (product.price + 10)) * 100)}%OFF
               </span>
             </span>
-            <span className="product-info-rating">({(Math.random()*(5-1)+1).toFixed(1)} rating)</span>
+            <span className="product-info-rating">
+              ({(Math.random() * (5 - 1) + 1).toFixed(1)} rating)
+            </span>
             {}
           </div>
           <div className="product-info-colur">
@@ -78,14 +80,14 @@ function Product() {
               ></div>
             ))}
           </div>
-          {product.category.name === "Cloths" ||
-            (product.category.name === "Shoes" && (
-              <div className="product-info-size">
-                {size.map((size, index) => (
-                  <span>{size}</span>
-                ))}
-              </div>
-            ))}
+          {(product.category.name === "Clothes" ||
+            product.category.name === "Shoes") && (
+            <div className="product-info-size">
+              {size.map((size, index) => (
+                <span>{size}</span>
+              ))}
+            </div>
+          )}
 
           <div className="product-info-AddToCart">Add to Cart</div>
           <div className="product-info-description">{product.description}</div>

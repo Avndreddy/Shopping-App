@@ -1,4 +1,4 @@
-import "../Styles/MyStyles.css";
+import "../Styles/Footer.css";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -11,8 +11,6 @@ function Footer() {
   };
   return (
     <div className="footer">
-
-
       <div className="footer-content">
         <div className="footer-content-brand">
           <div className="footer-content-brand-logo">. Brand Logo</div>
@@ -24,9 +22,10 @@ function Footer() {
             <span style={{ fontFamily: "Lobster", fontSize: "14px" }}>
               . Brand Logo
             </span>
-            , we believe clothing is more than fabric—it's a statement. With a focus on quality and sustainability, we craft pieces that inspire confidence and individuality.
-
-<div>Stay stylish. Stay you.</div>
+            , we believe clothing is more than fabric—it's a statement. With a
+            focus on quality and sustainability, we craft pieces that inspire
+            confidence and individuality.
+            <div>Stay stylish. Stay you.</div>
           </div>
         </div>
         <div className="footer-content-quick-links">
@@ -57,54 +56,53 @@ function Footer() {
           </li>
         </div>
         <div className="footer-content-Social">
-        <div className="NewsLetter">
-          <div className="NewsLetter-title">NEWSLETTER</div>
-          <div className="NewsLetter-p-tag">
-            Join our mail list to gey best offers and price
-            alerts.
-          </div>
-          <div className="NewsLetter-input">
-            {
-              <EmailIcon
-                sx={{
-                  color: "gray",
-                  fontSize: "medium",
-                  paddingLeft: "8px",
-                  position: "absolute",
-                }}
+          <div className="NewsLetter">
+            <div className="NewsLetter-title">NEWSLETTER</div>
+            <div className="NewsLetter-p-tag">
+              Join our mail list to gey best offers and price alerts.
+            </div>
+            <div className="NewsLetter-input">
+              {
+                <EmailIcon
+                  sx={{
+                    color: "gray",
+                    fontSize: "medium",
+                    paddingLeft: "8px",
+                    position: "absolute",
+                  }}
+                />
+              }
+              <input
+                className="input-email"
+                type="email"
+                placeholder="Your email here..."
               />
-            }
-            <input
-              className="input-email"
-              type="email"
-              placeholder="Your email here..."
-            />
-            <button className="Subscribe-btn">Subscribe Now</button>
+              <button className="Subscribe-btn">Subscribe Now</button>
+            </div>
           </div>
-        </div>
 
-        <div className="Social-links">
-          <div className="Social-links-text">FALLOW US:</div>
-          Discover the .BrandName Lifestyles
-          <div className="Social-links-icons">
-            <a href="https://www.facebook.com/">
-              <FacebookIcon fontSize="medium" sx={{ color: "black" }} />
-            </a>
-            <a href="https://www.facebook.com/">
-              <YouTubeIcon fontSize="medium" sx={{ color: "black" }} />
-            </a>
-            <a href="https://www.facebook.com/">
-              <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
-            </a>
-            <a href="https://www.facebook.com/">
-              <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
-            </a>
-            <a href="https://www.facebook.com/">
-              <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
-            </a>
+          <div className="Social-links">
+            <div className="Social-links-text">FALLOW US:</div>
+            Discover the .BrandName Lifestyles
+            <div className="Social-links-icons">
+              <a href="https://www.facebook.com/">
+                <FacebookIcon fontSize="medium" sx={{ color: "black" }} />
+              </a>
+              <a href="https://www.facebook.com/">
+                <YouTubeIcon fontSize="medium" sx={{ color: "black" }} />
+              </a>
+              <a href="https://www.facebook.com/">
+                <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
+              </a>
+              <a href="https://www.facebook.com/">
+                <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
+              </a>
+              <a href="https://www.facebook.com/">
+                <InstagramIcon fontSize="medium" sx={{ color: "black" }} />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
       <div>

@@ -1,0 +1,21 @@
+/* Sponsored/Ads */
+
+.Ads {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  gap: 20px;
+}
+
+.Ads-items {
+  max-width: 75%;
+  max-height: auto;
+}
+
+.Ads-item-img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Sponsored/Ads - END */

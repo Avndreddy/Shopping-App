@@ -1,0 +1,161 @@
+/* Footer */
+
+.footer {
+  background-color: #ffffff;
+  width: 100%;
+  height: 350px;
+  margin-top: 40px;
+  font-size: 12px;
+  position: relative;
+}
+
+/* footer-content */
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 60px;
+}
+
+.footer-content-brand {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  width: 300px;
+}
+
+.footer-content-brand-moto {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Lobster, cursive;
+  padding: 4px;
+  border-radius: 0px 0px 50px 2px;
+}
+
+.footer-content-brand-logo {
+  font-family: Lobster, cursive;
+  font-size: 32px;
+  display: flex;
+  justify-content: left;
+  border-radius: 50px 2px 0px 0px;
+}
+
+.footer-content-about-brand {
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* Footer Social */
+
+.footer-content-Social {
+  display: flex;
+  flex-direction: column;
+}
+
+/* NewsLetter */
+.NewsLetter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block: unset;
+  width: fit-content;
+  font-size: 14px;
+  gap: 4px;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.NewsLetter-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.NewsLetter-p-tag {
+  width: 320px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.NewsLetter-input {
+  display: flex;
+
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-email {
+  border: unset;
+  background-color: transparent;
+  padding: 8px;
+  background-color: white;
+  padding-left: 28px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.Subscribe-btn {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+/* NewsLetter - END */
+
+/* Social-links */
+
+.Social-links {
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+  top: 20px;
+  justify-content: left;
+  text-align: left;
+  padding: 20px;
+}
+
+.Social-links-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Social-links-icons {
+  display: flex;
+  gap: 4px;
+}
+
+/* Social-links - END */
+
+/* footer-content - END */
+
+/* Footer Foot */
+
+.footer-foot {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-content: center;
+  border-top: 1px solid black;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-foot-one {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.footer-foot-two {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+/* Footer Foot - END */
+
+/* Footer - END */
