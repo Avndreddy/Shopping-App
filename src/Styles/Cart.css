@@ -1,0 +1,80 @@
+.cart {
+  margin: 80px;
+  display: flex;
+  gap: 16px;
+}
+
+/* Section - 1 */
+.cart-section {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 16px;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  text-align: left;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+
+.cart-header-left {
+  padding: 10px 20px;
+
+}
+
+.cart-header-right {
+  padding: 10px 20px;
+}
+
+.cart-section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-section-Items-count {
+  font-size: 14px;
+}
+
+.Cart-section-items{
+    text-align: left;
+    padding: 20px;
+   
+}
+
+.cart-item{
+    border: 1px solid red;
+}
+
+/* Section - 2 */
+.cart-price-summery {
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 16px;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.cart-price-summery-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    text-align: left;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-price-summery-header-left{
+    padding: 10px 20px;
+}
+
+.cart-price-summery-title{
+    font-size: 20px;
+    font-weight: 600;
+}

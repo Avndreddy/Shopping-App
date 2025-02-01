@@ -1,17 +1,18 @@
 import "../Styles/LandingPage.css";
 import HeroBanner from "../Components/HeroBanner";
 import Ads from "../Components/Ads";
-import Products from "../Components/Products";
-
 import { useRef } from "react";
+import Product2 from "../Components/products2";
+
 
 function LandingPage() {
   const ref = useRef(null);
+
   return (
     <div className="Landing_page">
       <HeroBanner />
       <Ads />
-      <Products />
+      <Product2/>
     </div>
   );
 }

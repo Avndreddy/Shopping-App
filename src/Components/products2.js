@@ -1,11 +1,13 @@
 import "../Styles/Product_Cards.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Grid2, Paper } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useNavigate } from "react-router-dom";
-import { Grid2 } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function Products() {
+
+function Product2() {
   const [product, setProducts] = useState();
   const [categories, setCategories] = useState();
   const [viewmore, setViewMore] = useState(10);
@@ -14,6 +16,17 @@ function Products() {
   const handleViewMore = () => {
     setViewMore((prev) => prev + 10); // Show 10 more products (next 2 rows)
   };
+
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        mobile: 0,
+        tablet: 640,
+        laptop: 1064,
+        desktop: 1280,
+      },
+    },
+  });
 
   const navigate = useNavigate();
 
@@ -87,30 +100,15 @@ function Products() {
       console.log(localCart);
     }
   };
-
   return (
-    <div>
-      <h1>Products</h1>
-      <div container 
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          width: "95%",
-          margin: "0 auto",
-          justifyContent: "center",
-          gap: "16px",
-        }}
-      >
-        {/* <div style={{display:"flex",flexWrap:"wrap",width:"max-container",gap:"4px"}}>
-          {
-            categories && categories.map((category,index) => <div style={{display:"flex",padding:"8px",backgroundColor:"white"}}>{category.name}</div>)
-          }
-        </div> */}
-<div container spacing={2}>
+    <ThemeProvider theme={theme}>
+    <Grid2 container  spacing={2} className="product-conatiner">
         {product &&
-          product.slice(0, viewmore).map((product, index) => (
-            <div size={{ xs: 6, md: 8 }} className="product-conatiner" key={index}>
+          product.map((product, index) => (
+            <Grid2
+              className="product-conatiner"
+              key={index}
+            >
               <div
                 key={index}
                 onClick={() =>
@@ -128,11 +126,13 @@ function Products() {
                   )}
                 </div>
                 <div className="product-text">
-                  {product.title ? sliceName(product.title, 20): "Not Titeled"}
+                  {product.title ? sliceName(product.title, 20) : "Not Titeled"}
                 </div>
                 {product.category["name"] && (
                   <div className="product-category">
-                    {product.category["name"] == "undefined" ? "Other" : product.category["name"]}
+                    {product.category["name"] == "undefined"
+                      ? "Other"
+                      : product.category["name"]}
                   </div>
                 )}
                 <div className="product-price">
@@ -201,16 +201,18 @@ function Products() {
                   </span>
                 </div>
               </div>
-            </div>
-          ))}</div>
-      </div>
-      {product && product.length > viewmore && (
+            </Grid2>
+          ))}
+    
+    </Grid2>
+    <div>  {product && product.length > viewmore && (
         <button className="view-more" onClick={handleViewMore}>
           viewmore
         </button>
-      )}
-    </div>
+      )}</div>
+      </ThemeProvider>
   );
 }
 
-export default Products;
+export default Product2;
+

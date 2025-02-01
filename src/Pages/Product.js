@@ -4,36 +4,62 @@ import { useLocation } from "react-router-dom";
 import "../Styles/product.css";
 
 function Product() {
-  const ref = useRef(null);
+
   const location = useLocation();
   const product = location.state?.product;
   const [image, setImage] = useState(product.images[0]);
   const size = ["Size:", "S", "M", "L", "XL", "XXL"];
   const color = ["red", "blue", "white", "black", "gray"];
-
+  const [localCart, setLoaclCart] = useState(localStorage.getItem("Local_Cart"));
+console.log("test",localCart)
   const clickedImage = (img) => {
     setImage(img);
     return img;
   };
+
+const AddProductsToCart = async (product) => {
+    const count = 1;
+    const newCart = { ...product, count: count };
+    console.log(typeof(localCart))
+    if (localCart === '') {
+      setLoaclCart([newCart]);
+      localStorage.setItem("Local_Cart", JSON.stringify(localCart));
+    }
+    if (localCart && localCart.find(localCart => localCart.id == product.id)) {
+        localCart.map((localCart) =>
+        localCart.id == product.id ? localCart.count++ : localCart
+        
+      );
+      setLoaclCart(localCart)
+      localStorage.setItem("Local_Cart", JSON.stringify(localCart));
+    } else {
+      setLoaclCart([...localCart, newCart]);
+      localStorage.setItem("Local_Cart", JSON.stringify(localCart));
+    }
+  };
+
   return (
     <div className="product-details">
       <div className="product-containers">
         <div className="product-images">
           <div className="product-images-img">
             {product.images[0].startsWith("[") ? (
-              <div
-                style={{
-                  width: "650px",
-                  height: "650px",
-                  backgroundColor: "black",
-                  borderRadius: "5px",
-                }}
-              ></div>
+               <img className="product-images-img" src='https://api.algobook.info/v1/randomimage?category=backgrounds' />
             ) : (
               <img className="product-images-img" src={image} alt="No Img" />
             )}
           </div>
-          <div className="product-image-subimg-container">
+          {product.images[0].startsWith("[") ? (<div className="product-image-subimg-container">
+            {Array(3).fill(0).map(()=>{
+              return <img
+              src="https://api.algobook.info/v1/randomimage?category=backgrounds"
+              className="product-image-subimg"
+              alt="1234"
+            />
+            })}
+              
+           
+          </div>) : (<div className="product-image-subimg-container">
             {product.images.length > 1 &&
               product.images.map((img, index) => (
                 <img
@@ -44,7 +70,8 @@ function Product() {
                   alt=""
                 />
               ))}
-          </div>
+          </div>)
+          }
         </div>
 
         <div className="product-info">

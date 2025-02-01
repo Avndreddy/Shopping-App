@@ -2,21 +2,27 @@
 
 .product-conatiner {
   display: flex;
-  width: fit-content;
   border: 2px solid #f0f0f0;
   flex-direction: row;
-  max-width: min-content;
+  width: fit-content;
   font-size: 12px;
   background-color: white;
   font-family: Poppins;
   padding: 16px;
   border-radius: 20px;
   text-align: left;
+  justify-content: center;
 }
 
 .product-image {
   width: 200px;
   height: auto;
+  border-radius: 20px;
+}
+
+.product-no-image{
+  width: 200px;
+  height: 200px;
   border-radius: 20px;
 }
 
@@ -50,6 +56,7 @@
   border-radius: 8px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .view-more {
